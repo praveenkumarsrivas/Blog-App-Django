@@ -1,5 +1,5 @@
 # Blog App using Python3 / Django 3.0
-It's a Blog application, created using- >
+It's a Blog application, created using
 - Bootstrap4 / CSS
 - Django
 - Sqlite
