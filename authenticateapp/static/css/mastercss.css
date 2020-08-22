@@ -1,0 +1,51 @@
+body{
+background-color: #00060f;
+background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+color: aliceblue;
+}
+ @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #1C2331!important;
+            }
+        }
+.view,body,html{height:100%}.navbar{background-color:rgba(0,0,0,.2)}.page-footer,.top-nav-collapse{background-color:#1C2331}
+
+.footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 8%;
+   background-color: rgb(16, 46, 58);  
+   font-size: 1.5em;
+}
+
+.front-blog
+{
+    
+    font-size: 20em;
+    text-align: center;
+     font-family: Impact, Charcoal, sans-serif;
+}
+.welcome{
+    margin-top: 50px;
+     font-size: 4em;
+     text-align: center;
+     font-family: "Comic Sans MS", cursive, sans-serif;
+
+}
+
+#Sign-up,#Login{
+   color: #000102;
+}
+.form-style{
+    margin-top: 10px;;
+    color: #000102;
+    font-weight: 100;
+}
+.contact-header{
+    margin-top: 10px;
+     font-size: 2em;
+     text-align: center;
+     font-family: "Comic Sans MS", cursive, sans-serif;
+
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<body>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show my-0" role="alert">
+        <strong>{{message}}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% if allblogs|length < 1 %}
+    <h1>Your search - {{query}} - did not match any documents.</h1>
+
+    <h3>Suggestions:
+        <br>
+        Make sure that all words are spelled correctly.
+        <br>
+        Try different keywords.
+        <br>
+        Try more general keywords.</h3>
+
+    {% endif %}
+    {% for blog in allblogs %}
+    <div class="col-sm-3">
+        <div class="card" style="width:300px">
+            <img class="card-img-top" src="{{blog.avatar.url }}" alt="Avatar" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title" style="color: black;">{{blog.blogtopic}}</h4>
+                <p class="card-text" style="color: blue">{{blog.summary}}</p>
+                <p class="card-text" style="color: Orange; font-weight: bold;,">Read Time:
+                    {{blog.readtime}}</p>
+                <a href="{% url 'readmore'%}" class="btn btn-secondary">Read more</a>
+            </div>
+        </div>
+
+
+        {% endfor %}

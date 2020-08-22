@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Write Here{% endblock %}
+{% block content %}
+<div class="col-sm-12">
+    <p class="contact-header" style=" text-align: center;">Write Here</p>
+</div>
+<div class="col-sm-12 form-style">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <b>Start Writing Here</b>
+            </div>
+            <div class="card-block">
+                <form role="form" action='/writeblog' method='post'>
+                    {% csrf_token %}
+                    <div class="form-group col-lg-4">
+                        <label class="form-control-label" for="form-group-input">Email</label>
+                        <input type="email" class="form-control" id="form-group-input" name="email"
+                            placeholder=" {{request.user.email}}">
+
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label class="form-control-label" for="form-group-input">Author Name</label>
+                        <input type="text" class="form-control" id="form-group-input" name="author">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label class="form-control-label" for="form-group-input">Blog Topic</label>
+                        <input type="text" class="form-control" id="form-group-input" name="blogtopic">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label class="form-control-label" for="form-group-input">Summary of the Blog</label>
+                        <input type="text" class="form-control" id="form-group-input" name="summary">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label class="form-control-label" for="form-group-input">Suitable
+                            Thumbnail Picture for your blog (Max Size 1MB)</label>
+                        <input type="file" class="form-control" id="form-group-input" name="avatar">
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <label class="form-control-label" for="form-group-input">Your Blog Post</label>
+                        <textarea class="form-control" id="form-group-input" name="blogpost" rows="6"></textarea>
+                    </div>
+                    <button type="sumbit" class="btn btn-dark">Sumbit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript
+jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+{% endblock %}
